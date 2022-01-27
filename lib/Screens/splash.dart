@@ -25,8 +25,9 @@ class _SplashScreenState extends State<SplashScreen> {
             width: double.infinity,
             child: Image.asset(
               "assets/images/splash.png",
-              fit: BoxFit.contain,
+              fit: BoxFit.fill,
             ),
+            // color: Colors.lightBlueAccent,
           ),
           const Positioned(
             bottom: 30,
