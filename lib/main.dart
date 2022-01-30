@@ -13,7 +13,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: "Flutter UI",
-      theme: ThemeData(primarySwatch: Colors.blue),
+      // theme: ThemeData(colorScheme: Color(0x003cb04b)),
+      theme: Theme.of(context).copyWith(
+        colorScheme: Theme.of(context).colorScheme.copyWith(
+              primary: const Color(0xFF054dbb),
+            ),
+      ),
       home: SplashScreen(),
     );
   }
