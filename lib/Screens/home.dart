@@ -127,7 +127,7 @@ class HomeScreen extends StatelessWidget {
                   );
                 }).toList(),
                 options: CarouselOptions(
-                  height: MediaQuery.of(context).size.height / 5,
+                  height: MediaQuery.of(context).size.height / 5.3,
                   viewportFraction: 0.8,
                   initialPage: 0,
 
@@ -189,7 +189,6 @@ class HomeScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(22),
                           ),
                           child: Container(
-                            decoration: BoxDecoration(),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
