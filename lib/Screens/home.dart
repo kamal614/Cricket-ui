@@ -1,19 +1,40 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/Screens/account.dart';
+import 'package:flutter_ui/Screens/live_match.dart';
+import 'package:flutter_ui/Screens/match_card.dart';
+import 'package:flutter_ui/Screens/matchs.dart';
 import 'package:flutter_ui/widgets/slider.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int currentIndexval = 0;
+  final Screens = [
+    HomeScreen(),
+    player_card(),
+    livematch(),
+    match(),
+    Account()
+  ];
+
+  var Get;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         title: Text("Home"),
         centerTitle: true,
-        leading: Icon(Icons.menu),
+        leading: Icon(Icons.menu_open_rounded),
         actions: [Icon(Icons.search)],
       ),
+      // body: Screens[currentIndexval],
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -35,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                       return Container(
                           width: MediaQuery.of(context).size.width,
                           margin: EdgeInsets.symmetric(horizontal: 5.0),
-                          decoration: BoxDecoration(color: Colors.blue),
+                          decoration: BoxDecoration(color: Colors.white),
                           child: Center(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -43,12 +64,12 @@ class HomeScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.only(bottom: 10),
+                                    padding: const EdgeInsets.only(top: 8.0),
                                     child: Text(
                                       "3rd Match, ODI - Zimbabwe tour of Ireland, 2021",
                                       style: TextStyle(
                                           fontSize: 12,
-                                          color: Colors.black,
+                                          color: Colors.grey,
                                           fontWeight: FontWeight.bold),
                                     ),
                                   ),
@@ -132,7 +153,7 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                   Center(
                                     child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.only(top: 15),
                                       child: Text(
                                         "IRE Won by 3 Wickets(DLS)",
                                         style: TextStyle(
@@ -149,7 +170,7 @@ class HomeScreen extends StatelessWidget {
                   );
                 }).toList(),
                 options: CarouselOptions(
-                  height: MediaQuery.of(context).size.height / 5,
+                  height: MediaQuery.of(context).size.height / 5.5,
                   viewportFraction: 0.8,
                   initialPage: 0,
 
@@ -159,7 +180,7 @@ class HomeScreen extends StatelessWidget {
                   autoPlayInterval: Duration(seconds: 5),
                   autoPlayAnimationDuration: Duration(milliseconds: 800),
                   autoPlayCurve: Curves.fastOutSlowIn,
-                  enlargeCenterPage: true,
+                  enlargeCenterPage: false,
                   // onPageChanged: callbackFunction,
                   scrollDirection: Axis.horizontal,
                 )),
@@ -250,7 +271,7 @@ class HomeScreen extends StatelessWidget {
 
                   enableInfiniteScroll: true,
                   reverse: false,
-                  autoPlay: false,
+                  autoPlay: true,
                   autoPlayInterval: Duration(seconds: 5),
                   autoPlayAnimationDuration: Duration(milliseconds: 800),
                   autoPlayCurve: Curves.fastOutSlowIn,
@@ -264,38 +285,51 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-                icon: Icon(Icons.home, color: Colors.blue, size: 30),
-                title: Text('Home'),
-                backgroundColor: Colors.white),
+              icon: Icon(
+                Icons.home,
+              ),
+              title: Text('Home'),
+              // backgroundColor: Colors.white
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.circle, color: Colors.grey, size: 30),
-                title: Text('Matches'),
-                backgroundColor: Colors.white),
+              icon: Icon(
+                Icons.circle,
+              ),
+              title: Text('Matches'),
+              // backgroundColor: Colors.white
+            ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.network_check, color: Colors.grey, size: 30),
+              icon: Icon(
+                Icons.network_check,
+              ),
               title: Text('Live'),
-              backgroundColor: Colors.white,
+              // backgroundColor: Colors.white,
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.settings,
-                color: Colors.grey,
-                size: 30,
               ),
               title: Text('Settings'),
-              backgroundColor: Colors.white,
+              // backgroundColor: Colors.white,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person, color: Colors.grey, size: 30),
+              icon: Icon(
+                Icons.person,
+              ),
               title: Text('Account'),
-              backgroundColor: Colors.white,
+              // backgroundColor: Colors.white,
             ),
           ],
-          type: BottomNavigationBarType.shifting,
+          type: BottomNavigationBarType.fixed,
           currentIndex: 0,
-          selectedItemColor: Colors.black,
-          iconSize: 40,
-          // onTap: _onItemTapped,
+          backgroundColor: Colors.white,
+          selectedItemColor: Color(0xFF054dbb),
+          selectedFontSize: 12,
+          unselectedFontSize: 12,
+          // selectedIconTheme: ,
+          unselectedItemColor: Colors.grey,
+          iconSize: 25,
+          onTap: (index) => setState(() => currentIndexval = index),
           elevation: 5),
     );
   }
