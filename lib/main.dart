@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/Screens/live_match.dart';
 import 'package:flutter_ui/Screens/match_card.dart';
 import 'package:flutter_ui/Screens/matchs.dart';
 import 'package:flutter_ui/Screens/splash.dart';
+import 'package:flutter_ui/Screens/table.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
@@ -18,16 +20,18 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         tabBarTheme: TabBarTheme(
-            // labelColor: Colors.grey,
-            labelColor: Colors.blue,
-            unselectedLabelColor: Colors.grey,
-            indicator: UnderlineTabIndicator(
-                borderSide: BorderSide(color: Colors.blue))),
+          // labelColor: Colors.grey,
+          labelColor: Colors.blue[900],
+          unselectedLabelColor: Colors.grey,
+          indicator: UnderlineTabIndicator(
+            borderSide: BorderSide(color: Colors.blue.shade900),
+          ),
+        ),
         // primaryColor: Colors.pink[800],
       ),
 
       // home: SplashScreen(),
-      home: player_card(),
+      home: livematch(),
     );
   }
 }
