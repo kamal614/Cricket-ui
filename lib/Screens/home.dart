@@ -35,99 +35,121 @@ class HomeScreen extends StatelessWidget {
                       return Container(
                           width: MediaQuery.of(context).size.width,
                           margin: EdgeInsets.symmetric(horizontal: 5.0),
-                          decoration: BoxDecoration(color: Colors.grey),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(bottom: 10),
-                                  child: Text(
-                                    "3rd Match, ODI - Zimbabwe tour of Ireland, 2021",
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold),
+                          decoration: BoxDecoration(color: Colors.blue),
+                          child: Center(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 10),
+                                    child: Text(
+                                      "3rd Match, ODI - Zimbabwe tour of Ireland, 2021",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
-                                ),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Column(
-                                      children: [
-                                        Image.asset("assets/images/zim.png",
-                                            height: 40, width: 40),
-                                        Text("Zimbabwe")
-                                      ],
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: const [
-                                        Text(
-                                          "150/10",
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Text(
-                                          "20.4 Ov.",
-                                          style: TextStyle(
-                                              fontSize: 12, color: Colors.grey),
-                                        )
-                                      ],
-                                    ),
-                                    Image.asset(
-                                      "assets/images/vs.png",
-                                      height: 30,
-                                      width: 30,
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: const [
-                                        Text(
-                                          "150/10",
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        Text(
-                                          "20.4 Ov.",
-                                          style: TextStyle(
-                                              fontSize: 12, color: Colors.grey),
-                                        )
-                                      ],
-                                    ),
-                                    Column(
-                                      children: [
-                                        Image.asset("assets/images/ire.png",
-                                            height: 40, width: 40),
-                                        Text("Ireland")
-                                      ],
-                                    )
-                                  ],
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    "IRE Won by 3 Wickets(DLS)",
-                                    style: TextStyle(
-                                        color: Colors.red,
-                                        fontWeight: FontWeight.bold),
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          Column(
+                                            children: [
+                                              Image.asset(
+                                                  "assets/images/zim.png",
+                                                  height: 40,
+                                                  width: 40),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 8.0),
+                                                child: Text("Zimbabwe"),
+                                              )
+                                            ],
+                                          ),
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: const [
+                                              Text(
+                                                "150/10",
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                              Text(
+                                                "20.4 Ov.",
+                                                style: TextStyle(
+                                                    fontSize: 12,
+                                                    color: Colors.grey),
+                                              )
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                      Image.asset(
+                                        "assets/images/vs.png",
+                                        height: 20,
+                                        width: 20,
+                                      ),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: const [
+                                          Text(
+                                            "150/10",
+                                            style: TextStyle(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          Text(
+                                            "20.4 Ov.",
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                color: Colors.grey),
+                                          )
+                                        ],
+                                      ),
+                                      Column(
+                                        children: [
+                                          Image.asset("assets/images/ire.png",
+                                              height: 40, width: 40),
+                                          Text("Ireland")
+                                        ],
+                                      )
+                                    ],
                                   ),
-                                )
-                              ],
+                                  Center(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        "IRE Won by 3 Wickets(DLS)",
+                                        style: TextStyle(
+                                            color: Colors.red,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
                           ));
                     },
                   );
                 }).toList(),
                 options: CarouselOptions(
-                  height: MediaQuery.of(context).size.height / 5.3,
+                  height: MediaQuery.of(context).size.height / 5,
                   viewportFraction: 0.8,
                   initialPage: 0,
 
