@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/Screens/live_match.dart';
+import 'package:flutter_ui/Screens/splash.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
@@ -13,21 +14,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: "Flutter UI",
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        tabBarTheme: TabBarTheme(
-          // labelColor: Colors.grey,
-          labelColor: Colors.blue[900],
-          unselectedLabelColor: Colors.grey,
-          indicator: UnderlineTabIndicator(
-            borderSide: BorderSide(color: Colors.blue.shade900),
-          ),
-        ),
-        // primaryColor: Colors.pink[800],
+      // theme: ThemeData(colorScheme: Color(0x003cb04b)),
+      theme: Theme.of(context).copyWith(
+        colorScheme: Theme.of(context).colorScheme.copyWith(
+              primary: const Color(0xFF054dbb),
+            ),
       ),
-
-      // home: SplashScreen(),
-      home: livematch(),
+      home: SplashScreen(),
     );
   }
 }

@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                       return Container(
                           width: MediaQuery.of(context).size.width,
                           margin: EdgeInsets.symmetric(horizontal: 5.0),
-                          decoration: BoxDecoration(color: Colors.white),
+                          decoration: BoxDecoration(color: Colors.grey),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                                     "3rd Match, ODI - Zimbabwe tour of Ireland, 2021",
                                     style: TextStyle(
                                         fontSize: 12,
-                                        color: Colors.grey,
+                                        color: Colors.black,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
@@ -92,13 +92,13 @@ class HomeScreen extends StatelessWidget {
                                         Text(
                                           "150/10",
                                           style: TextStyle(
-                                              fontSize: 20,
+                                              fontSize: 16,
                                               fontWeight: FontWeight.bold),
                                         ),
                                         Text(
                                           "20.4 Ov.",
                                           style: TextStyle(
-                                              fontSize: 13, color: Colors.grey),
+                                              fontSize: 12, color: Colors.grey),
                                         )
                                       ],
                                     ),
@@ -127,7 +127,8 @@ class HomeScreen extends StatelessWidget {
                   );
                 }).toList(),
                 options: CarouselOptions(
-                  height: 200.0, viewportFraction: 0.8,
+                  height: MediaQuery.of(context).size.height / 5,
+                  viewportFraction: 0.8,
                   initialPage: 0,
 
                   enableInfiniteScroll: true,
@@ -175,6 +176,66 @@ class HomeScreen extends StatelessWidget {
                       style: TextStyle(fontSize: 15, color: Colors.grey),
                     ),
                   ],
+                )),
+            CarouselSlider(
+                items: [1, 2, 3].map((i) {
+                  return Builder(
+                    builder: (BuildContext context) {
+                      return Container(
+                          width: MediaQuery.of(context).size.width / 2.5,
+                          margin: EdgeInsets.symmetric(horizontal: 5.0),
+                          decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius: BorderRadius.circular(22),
+                          ),
+                          child: Container(
+                            decoration: BoxDecoration(),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(22),
+                                      topRight: Radius.circular(22)),
+                                  child: Image.asset(
+                                    'assets/images/auscri.jpg',
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Text(
+                                    "Australia sit pretty with 175",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."),
+                                )
+                              ],
+                            ),
+                          ));
+                    },
+                  );
+                }).toList(),
+                options: CarouselOptions(
+                  height: MediaQuery.of(context).size.height / 3,
+                  viewportFraction: 0.8,
+                  initialPage: 0,
+
+                  enableInfiniteScroll: true,
+                  reverse: false,
+                  autoPlay: false,
+                  autoPlayInterval: Duration(seconds: 5),
+                  autoPlayAnimationDuration: Duration(milliseconds: 800),
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  enlargeCenterPage: false,
+                  // onPageChanged: callbackFunction,
+                  scrollDirection: Axis.horizontal,
                 )),
           ],
         ),
