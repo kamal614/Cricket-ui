@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/Screens/live_match.dart';
-import 'package:flutter_ui/Screens/match_card.dart';
-import 'package:flutter_ui/Screens/matchs.dart';
-import 'package:flutter_ui/Screens/splash.dart';
-import 'package:flutter_ui/Screens/table.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
