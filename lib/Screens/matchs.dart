@@ -31,6 +31,7 @@ class _matchState extends State<match> {
             text: "T10",
           ),
         ],
+        labelColor: Color(0xFF054dbb),
       );
 
   @override
@@ -95,7 +96,6 @@ class _matchState extends State<match> {
                       child: Container(
                         child: Image.asset(
                           "assets/images/vs.png",
-                          color: Colors.blue,
                           scale: 11,
                         ),
                       ),
@@ -117,7 +117,7 @@ class _matchState extends State<match> {
                           margin: EdgeInsets.all(8),
                           height: 20,
                           decoration: BoxDecoration(
-                              color: Colors.blue,
+                              color: Color(0xFF054dbb),
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(15),
                                   topLeft: Radius.circular(15))),
@@ -156,11 +156,8 @@ class _matchState extends State<match> {
                       right: 180,
                       top: 60,
                       child: Container(
-                        child: Image.asset(
-                          "assets/images/vs.png",
-                          scale: 11,
-                          color: Colors.blue,
-                        ),
+                        child: Image.asset("assets/images/vs.png",
+                            scale: 11, color: Color(0xFF054dbb)),
                       ),
                     ),
                     Positioned(
@@ -180,7 +177,7 @@ class _matchState extends State<match> {
                           margin: EdgeInsets.all(8),
                           height: 20,
                           decoration: BoxDecoration(
-                              color: Colors.blue,
+                              color: Color(0xFF054dbb),
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(15),
                                   topLeft: Radius.circular(15))),
@@ -222,7 +219,7 @@ class _matchState extends State<match> {
                         child: Image.asset(
                           "assets/images/vs.png",
                           scale: 11,
-                          color: Colors.blue,
+                          color: Color(0xFF054dbb),
                         ),
                       ),
                     ),
@@ -243,7 +240,7 @@ class _matchState extends State<match> {
                           margin: EdgeInsets.all(8),
                           height: 20,
                           decoration: BoxDecoration(
-                              color: Colors.blue,
+                              color: Color(0xFF054dbb),
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(15),
                                   topLeft: Radius.circular(15))),
@@ -285,7 +282,7 @@ class _matchState extends State<match> {
                         child: Image.asset(
                           "assets/images/vs.png",
                           scale: 11,
-                          color: Colors.blue,
+                          color: Color(0xFF054dbb),
                         ),
                       ),
                     ),
@@ -306,7 +303,7 @@ class _matchState extends State<match> {
                           margin: EdgeInsets.all(8),
                           height: 20,
                           decoration: BoxDecoration(
-                              color: Colors.blue,
+                              color: Color(0xFF054dbb),
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(15),
                                   topLeft: Radius.circular(15))),
@@ -348,7 +345,7 @@ class _matchState extends State<match> {
                         child: Image.asset(
                           "assets/images/vs.png",
                           scale: 11,
-                          color: Colors.blue,
+                          color: Color(0xFF054dbb),
                         ),
                       ),
                     ),
@@ -369,7 +366,7 @@ class _matchState extends State<match> {
                           margin: EdgeInsets.all(8),
                           height: 20,
                           decoration: BoxDecoration(
-                              color: Colors.blue,
+                              color: Color(0xFF054dbb),
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(15),
                                   topLeft: Radius.circular(15))),

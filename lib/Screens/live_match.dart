@@ -1,29 +1,29 @@
+import 'package:carousel_slider/carousel_options.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class livematch extends StatelessWidget {
   const livematch({Key? key}) : super(key: key);
-  TabBar get _tabBar => TabBar(
-        tabs: [
-          Tab(
-            text: "Live",
-          ),
-          // SizedBox(
-          //   width: 20,
-          // ),
-          Tab(
-            text: "Score Card",
-          ),
-          Tab(
-            text: "Points",
-          ),
-          Tab(
-            text: "Info",
-          ),
-          Tab(
-            text: "Balance",
-          ),
-        ],
-      );
+  TabBar get _tabBar => TabBar(tabs: [
+        Tab(
+          text: "Live",
+        ),
+        // SizedBox(
+        //   width: 20,
+        // ),
+        Tab(
+          text: "Score Card",
+        ),
+        Tab(
+          text: "Points",
+        ),
+        Tab(
+          text: "Info",
+        ),
+        Tab(
+          text: "Balance",
+        ),
+      ], labelColor: Color(0xFF054dbb));
 
   @override
   Widget build(BuildContext context) {
@@ -31,27 +31,30 @@ class livematch extends StatelessWidget {
       length: 5,
       child: Scaffold(
         appBar: AppBar(
-          flexibleSpace: Container(
-            color: Colors.blue[900],
-            height: 70,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Icon(
-                  Icons.chevron_left_rounded,
-                  color: Colors.white,
-                ),
-                Text(
-                  "Live Line",
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white),
-                ),
-                Icon(Icons.search, color: Colors.white),
-              ],
-            ),
+          title: Center(
+            child: Text("Live line"),
           ),
+          // flexibleSpace: Container(
+          //   color: Colors.blue[900],
+          //   height: 70,
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //     children: [
+          //       Icon(
+          //         Icons.keyboard_arrow_left_outlined,
+          //         color: Colors.white,
+          //       ),
+          //       Text(
+          //         "Live Line",
+          //         style: TextStyle(
+          //             fontSize: 20,
+          //             fontWeight: FontWeight.w600,
+          //             color: Colors.white),
+          //       ),
+          //       Icon(Icons.search, color: Colors.white),
+          //     ],
+          //   ),
+          // ),
           bottom: PreferredSize(
             preferredSize: _tabBar.preferredSize,
             child: ColoredBox(
@@ -61,12 +64,145 @@ class livematch extends StatelessWidget {
           ),
         ),
         body: Container(
+          // height: 200,
           child: Column(
             children: [
-              Container(
-                color: Colors.amberAccent,
-                height: 200,
-              ),
+              CarouselSlider(
+                  items: [1, 2, 3].map((i) {
+                    return Builder(
+                      builder: (BuildContext context) {
+                        return Container(
+                            width: MediaQuery.of(context).size.width,
+                            margin: EdgeInsets.symmetric(horizontal: 5.0),
+                            decoration: BoxDecoration(color: Colors.white),
+                            child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 8.0),
+                                      child: Text(
+                                        "3rd Match, ODI - Zimbabwe tour of Ireland, 2021",
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            color: Colors.grey,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            Column(
+                                              children: [
+                                                Image.asset(
+                                                    "assets/images/zim.png",
+                                                    height: 40,
+                                                    width: 40),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          top: 8.0),
+                                                  child: Text("Zimbabwe"),
+                                                )
+                                              ],
+                                            ),
+                                            Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: const [
+                                                Text(
+                                                  "150/10",
+                                                  style: TextStyle(
+                                                      fontSize: 16,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                ),
+                                                Text(
+                                                  "20.4 Ov.",
+                                                  style: TextStyle(
+                                                      fontSize: 12,
+                                                      color: Colors.grey),
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                        Image.asset(
+                                          "assets/images/vs.png",
+                                          height: 20,
+                                          width: 20,
+                                        ),
+                                        Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: const [
+                                            Text(
+                                              "150/10",
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            Text(
+                                              "20.4 Ov.",
+                                              style: TextStyle(
+                                                  fontSize: 12,
+                                                  color: Colors.grey),
+                                            )
+                                          ],
+                                        ),
+                                        Column(
+                                          children: [
+                                            Image.asset("assets/images/ire.png",
+                                                height: 40, width: 40),
+                                            Text("Ireland")
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                    Center(
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(top: 15),
+                                        child: Text(
+                                          "IRE Won by 3 Wickets(DLS)",
+                                          style: TextStyle(
+                                              color: Colors.red,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ));
+                      },
+                    );
+                  }).toList(),
+                  options: CarouselOptions(
+                    height: MediaQuery.of(context).size.height / 5.5,
+                    viewportFraction: 0.8,
+                    initialPage: 0,
+
+                    enableInfiniteScroll: true,
+                    reverse: false,
+                    autoPlay: true,
+                    autoPlayInterval: Duration(seconds: 5),
+                    autoPlayAnimationDuration: Duration(milliseconds: 800),
+                    autoPlayCurve: Curves.fastOutSlowIn,
+                    enlargeCenterPage: false,
+                    // onPageChanged: callbackFunction,
+                    scrollDirection: Axis.horizontal,
+                  )),
               SizedBox(
                 height: 10,
               ),
@@ -191,7 +327,7 @@ class livematch extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 18.0),
+                padding: const EdgeInsets.only(left: 18.0, top: 10),
                 child: Container(
                   height: 20,
                   // color: Colors.teal,
