@@ -260,7 +260,7 @@ class _HomescreenfinalState extends State<Homescreenfinal> {
                   autoPlayInterval: Duration(seconds: 5),
                   autoPlayAnimationDuration: Duration(milliseconds: 800),
                   autoPlayCurve: Curves.fastOutSlowIn,
-                  enlargeCenterPage: false,
+                  enlargeCenterPage: true,
                   // onPageChanged: callbackFunction,
                   scrollDirection: Axis.horizontal,
                 )),

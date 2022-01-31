@@ -31,9 +31,8 @@ class livematch extends StatelessWidget {
       length: 5,
       child: Scaffold(
         appBar: AppBar(
-          title: Center(
-            child: Text("Live line"),
-          ),
+          centerTitle: true,
+          title: Text("Live line"),
           // flexibleSpace: Container(
           //   color: Colors.blue[900],
           //   height: 70,

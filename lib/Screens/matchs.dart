@@ -41,7 +41,7 @@ class _matchState extends State<match> {
       child: Scaffold(
         appBar: AppBar(
           title: Center(
-            child: Text("Matchs"),
+            child: Text("Matches"),
           ),
           actions: <Widget>[
             IconButton(
@@ -112,7 +112,8 @@ class _matchState extends State<match> {
                     ),
                     Positioned(
                         bottom: 0,
-                        right: 100,
+                        right: 80,
+                        left: 80,
                         child: Container(
                           margin: EdgeInsets.all(8),
                           height: 20,
@@ -121,7 +122,11 @@ class _matchState extends State<match> {
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(15),
                                   topLeft: Radius.circular(15))),
-                          child: Text("  Mon. 07:30|28 Nov.2021   "),
+                          child: Center(
+                              child: Text(
+                            "Mon. 07:30|28 Nov.2021",
+                            style: TextStyle(color: Colors.white),
+                          )),
                         ))
                   ],
                 ),
@@ -172,7 +177,8 @@ class _matchState extends State<match> {
                     ),
                     Positioned(
                         bottom: 0,
-                        right: 100,
+                        right: 80,
+                        left: 80,
                         child: Container(
                           margin: EdgeInsets.all(8),
                           height: 20,
@@ -181,7 +187,11 @@ class _matchState extends State<match> {
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(15),
                                   topLeft: Radius.circular(15))),
-                          child: Text("  Mon. 07:30|28 Nov.2021   "),
+                          child: Center(
+                              child: Text(
+                            "Mon. 07:30|28 Nov.2021",
+                            style: TextStyle(color: Colors.white),
+                          )),
                         ))
                   ],
                 ),
@@ -235,7 +245,8 @@ class _matchState extends State<match> {
                     ),
                     Positioned(
                         bottom: 0,
-                        right: 100,
+                        right: 80,
+                        left: 80,
                         child: Container(
                           margin: EdgeInsets.all(8),
                           height: 20,
@@ -244,7 +255,80 @@ class _matchState extends State<match> {
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(15),
                                   topLeft: Radius.circular(15))),
-                          child: Text("  Mon. 07:30|28 Nov.2021   "),
+                          child: Center(
+                              child: Text(
+                            "Mon. 07:30|28 Nov.2021",
+                            style: TextStyle(color: Colors.white),
+                          )),
+                        ))
+                  ],
+                ),
+              ),
+              Container(
+                child: Stack(
+                  children: [
+                    Image.asset("assets/images/matchbg.png"),
+                    Positioned(
+                      // right: 180,
+                      left: 180,
+                      top: 19,
+                      child: Container(
+                        child: Text("IPL T20"),
+                      ),
+                    ),
+                    Positioned(
+                      left: 0,
+                      top: 25,
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Image.asset(
+                              "assets/images/cskrb.png",
+                              scale: 4,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      right: 180,
+                      top: 60,
+                      child: Container(
+                        child: Image.asset(
+                          "assets/images/vs.png",
+                          scale: 11,
+                          color: Color(0xFF054dbb),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      right: 5,
+                      top: 12,
+                      child: Container(
+                        child: Image.asset(
+                          "assets/images/mirb.png",
+                          scale: 4,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                        bottom: 0,
+                        right: 80,
+                        left: 80,
+                        child: Container(
+                          margin: EdgeInsets.all(8),
+                          height: 20,
+                          decoration: BoxDecoration(
+                              color: Color(0xFF054dbb),
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(15),
+                                  topLeft: Radius.circular(15))),
+                          child: Center(
+                              child: Text(
+                            "Mon. 07:30|28 Nov.2021",
+                            style: TextStyle(color: Colors.white),
+                          )),
                         ))
                   ],
                 ),
@@ -298,7 +382,8 @@ class _matchState extends State<match> {
                     ),
                     Positioned(
                         bottom: 0,
-                        right: 100,
+                        right: 80,
+                        left: 80,
                         child: Container(
                           margin: EdgeInsets.all(8),
                           height: 20,
@@ -307,71 +392,12 @@ class _matchState extends State<match> {
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(15),
                                   topLeft: Radius.circular(15))),
-                          child: Text("  Mon. 07:30|28 Nov.2021   "),
-                        )),
-                  ],
-                ),
-              ),
-              Container(
-                child: Stack(
-                  children: [
-                    Image.asset("assets/images/matchbg.png"),
-                    Positioned(
-                      left: 180,
-                      top: 19,
-                      child: Container(
-                        child: Text("IPL T20"),
-                      ),
-                    ),
-                    Positioned(
-                      left: 0,
-                      top: 25,
-                      child: Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Image.asset(
-                              "assets/images/cskrb.png",
-                              scale: 4,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      right: 180,
-                      top: 60,
-                      child: Container(
-                        child: Image.asset(
-                          "assets/images/vs.png",
-                          scale: 11,
-                          color: Color(0xFF054dbb),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      right: 5,
-                      top: 12,
-                      child: Container(
-                        child: Image.asset(
-                          "assets/images/mirb.png",
-                          scale: 4,
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                        bottom: 0,
-                        right: 100,
-                        child: Container(
-                          margin: EdgeInsets.all(8),
-                          height: 20,
-                          decoration: BoxDecoration(
-                              color: Color(0xFF054dbb),
-                              borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(15),
-                                  topLeft: Radius.circular(15))),
-                          child: Text("  Mon. 07:30|28 Nov.2021   "),
-                        )),
+                          child: Center(
+                              child: Text(
+                            "Mon. 07:30|28 Nov.2021",
+                            style: TextStyle(color: Colors.white),
+                          )),
+                        ))
                   ],
                 ),
               ),
