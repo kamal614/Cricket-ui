@@ -64,236 +64,318 @@ class _matchState extends State<match> {
               child: Column(
             children: [
               Container(
-                  child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.amber,
-                  ),
-                  height: 140,
-                  width: double.infinity,
-                  child: Column(
-                    children: [
-                      Column(
-                        children: [Text("IPL T20")],
+                child: Stack(
+                  children: [
+                    Image.asset("assets/images/matchbg.png"),
+                    Positioned(
+                      left: 180,
+                      top: 19,
+                      child: Container(
+                        child: Text("IPL T20"),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            height: 100,
-                            width: 80,
-                            child: Image.asset(
+                    ),
+                    Positioned(
+                      left: 0,
+                      top: 25,
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Image.asset(
                               "assets/images/cskrb.png",
+                              scale: 4,
                             ),
-                          ),
-                          Container(
-                            height: 50,
-                            width: 30,
-                            child: Image.asset(
-                              "assets/images/vs.png",
-                            ),
-                          ),
-                          Container(
-                            height: 100,
-                            width: 80,
-                            child: Image.asset(
-                              "assets/images/mirb.png",
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Container(
-                            padding:
-                                EdgeInsets.only(left: 25, right: 25, top: 8),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(15),
-                                    topRight: Radius.circular(15)),
-                                color: Colors.blue[800]),
-                            child: Text("Mon. 07:30|28 Nov.2021"),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
+                    ),
+                    Positioned(
+                      right: 180,
+                      top: 60,
+                      child: Container(
+                        child: Image.asset(
+                          "assets/images/vs.png",
+                          color: Colors.blue,
+                          scale: 11,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      right: 5,
+                      top: 12,
+                      child: Container(
+                        child: Image.asset(
+                          "assets/images/mirb.png",
+                          scale: 4,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                        bottom: 0,
+                        right: 100,
+                        child: Container(
+                          margin: EdgeInsets.all(8),
+                          height: 20,
+                          decoration: BoxDecoration(
+                              color: Colors.blue,
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(15),
+                                  topLeft: Radius.circular(15))),
+                          child: Text("  Mon. 07:30|28 Nov.2021   "),
+                        ))
+                  ],
                 ),
-              )),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.amber,
-                  ),
-                  height: 140,
-                  width: double.infinity,
-                  child: Column(
-                    children: [
-                      Column(
-                        children: [Text("IPL T20")],
+              ),
+              Container(
+                child: Stack(
+                  children: [
+                    Image.asset("assets/images/matchbg.png"),
+                    Positioned(
+                      left: 180,
+                      top: 19,
+                      child: Container(
+                        child: Text("IPL T20"),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            height: 100,
-                            width: 80,
-                            child: Image.asset(
+                    ),
+                    Positioned(
+                      left: 25,
+                      top: 30,
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Image.asset(
                               "assets/images/kkrrb.png",
+                              scale: 3,
                             ),
-                          ),
-                          Container(
-                            height: 50,
-                            width: 30,
-                            child: Image.asset(
-                              "assets/images/vs.png",
-                            ),
-                          ),
-                          Container(
-                            height: 100,
-                            width: 80,
-                            child: Image.asset(
-                              "assets/images/rcbrb.png",
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Container(
-                            padding:
-                                EdgeInsets.only(left: 25, right: 25, top: 8),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(15),
-                                    topRight: Radius.circular(15)),
-                                color: Colors.blue[800]),
-                            child: Text("Mon. 07:30|28 Nov.2021"),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
+                    ),
+                    Positioned(
+                      right: 180,
+                      top: 60,
+                      child: Container(
+                        child: Image.asset(
+                          "assets/images/vs.png",
+                          scale: 11,
+                          color: Colors.blue,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      right: 30,
+                      top: 30,
+                      child: Container(
+                        child: Image.asset(
+                          "assets/images/rcbrb.png",
+                          scale: 6,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                        bottom: 0,
+                        right: 100,
+                        child: Container(
+                          margin: EdgeInsets.all(8),
+                          height: 20,
+                          decoration: BoxDecoration(
+                              color: Colors.blue,
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(15),
+                                  topLeft: Radius.circular(15))),
+                          child: Text("  Mon. 07:30|28 Nov.2021   "),
+                        ))
+                  ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.amber,
-                  ),
-                  height: 140,
-                  width: double.infinity,
-                  child: Column(
-                    children: [
-                      Column(
-                        children: [Text("IPL T20")],
+              Container(
+                child: Stack(
+                  children: [
+                    Image.asset("assets/images/matchbg.png"),
+                    Positioned(
+                      left: 180,
+                      top: 19,
+                      child: Container(
+                        child: Text("ODI"),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            height: 100,
-                            width: 80,
-                            child: Image.asset(
+                    ),
+                    Positioned(
+                      left: 35,
+                      top: 45,
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Image.asset(
                               "assets/images/indiarb.png",
+                              scale: 9,
                             ),
-                          ),
-                          Container(
-                            height: 50,
-                            width: 30,
-                            child: Image.asset(
-                              "assets/images/vs.png",
-                            ),
-                          ),
-                          Container(
-                            height: 100,
-                            width: 80,
-                            child: Image.asset(
-                              "assets/images/pakrb.png",
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Container(
-                            padding:
-                                EdgeInsets.only(left: 25, right: 25, top: 8),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(15),
-                                    topRight: Radius.circular(15)),
-                                color: Colors.blue[800]),
-                            child: Text("Mon. 07:30|28 Nov.2021"),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
+                    ),
+                    Positioned(
+                      right: 180,
+                      top: 60,
+                      child: Container(
+                        child: Image.asset(
+                          "assets/images/vs.png",
+                          scale: 11,
+                          color: Colors.blue,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      right: 30,
+                      top: 45,
+                      child: Container(
+                        child: Image.asset(
+                          "assets/images/pakrb.png",
+                          scale: 4,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                        bottom: 0,
+                        right: 100,
+                        child: Container(
+                          margin: EdgeInsets.all(8),
+                          height: 20,
+                          decoration: BoxDecoration(
+                              color: Colors.blue,
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(15),
+                                  topLeft: Radius.circular(15))),
+                          child: Text("  Mon. 07:30|28 Nov.2021   "),
+                        ))
+                  ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.amber,
-                  ),
-                  height: 140,
-                  width: double.infinity,
-                  child: Column(
-                    children: [
-                      Column(
-                        children: [Text("IPL T20")],
+              Container(
+                child: Stack(
+                  children: [
+                    Image.asset("assets/images/matchbg.png"),
+                    Positioned(
+                      left: 180,
+                      top: 19,
+                      child: Container(
+                        child: Text("IPL T20"),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            height: 100,
-                            width: 80,
-                            child: Image.asset(
+                    ),
+                    Positioned(
+                      left: 0,
+                      top: 25,
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Image.asset(
                               "assets/images/cskrb.png",
+                              scale: 4,
                             ),
-                          ),
-                          Container(
-                            height: 50,
-                            width: 30,
-                            child: Image.asset(
-                              "assets/images/vs.png",
-                            ),
-                          ),
-                          Container(
-                            height: 100,
-                            width: 80,
-                            child: Image.asset(
-                              "assets/images/mirb.png",
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Container(
-                            padding:
-                                EdgeInsets.only(left: 25, right: 25, top: 8),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(15),
-                                    topRight: Radius.circular(15)),
-                                color: Colors.blue[800]),
-                            child: Text("Mon. 07:30|28 Nov.2021"),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
+                    ),
+                    Positioned(
+                      right: 180,
+                      top: 60,
+                      child: Container(
+                        child: Image.asset(
+                          "assets/images/vs.png",
+                          scale: 11,
+                          color: Colors.blue,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      right: 5,
+                      top: 12,
+                      child: Container(
+                        child: Image.asset(
+                          "assets/images/mirb.png",
+                          scale: 4,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                        bottom: 0,
+                        right: 100,
+                        child: Container(
+                          margin: EdgeInsets.all(8),
+                          height: 20,
+                          decoration: BoxDecoration(
+                              color: Colors.blue,
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(15),
+                                  topLeft: Radius.circular(15))),
+                          child: Text("  Mon. 07:30|28 Nov.2021   "),
+                        )),
+                  ],
+                ),
+              ),
+              Container(
+                child: Stack(
+                  children: [
+                    Image.asset("assets/images/matchbg.png"),
+                    Positioned(
+                      left: 180,
+                      top: 19,
+                      child: Container(
+                        child: Text("IPL T20"),
+                      ),
+                    ),
+                    Positioned(
+                      left: 0,
+                      top: 25,
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Image.asset(
+                              "assets/images/cskrb.png",
+                              scale: 4,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      right: 180,
+                      top: 60,
+                      child: Container(
+                        child: Image.asset(
+                          "assets/images/vs.png",
+                          scale: 11,
+                          color: Colors.blue,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      right: 5,
+                      top: 12,
+                      child: Container(
+                        child: Image.asset(
+                          "assets/images/mirb.png",
+                          scale: 4,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                        bottom: 0,
+                        right: 100,
+                        child: Container(
+                          margin: EdgeInsets.all(8),
+                          height: 20,
+                          decoration: BoxDecoration(
+                              color: Colors.blue,
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(15),
+                                  topLeft: Radius.circular(15))),
+                          child: Text("  Mon. 07:30|28 Nov.2021   "),
+                        )),
+                  ],
                 ),
               ),
             ],
